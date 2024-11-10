@@ -12,14 +12,6 @@ const generateRandomColor = (): string => {
   return color;
 };
 
-// Helper function to generate random time between min and max minutes
-const generateRandomTime = (minMinutes: number, maxMinutes: number): string => {
-  const minutes = Math.floor(Math.random() * (maxMinutes - minMinutes + 1) + minMinutes);
-  const hours = Math.floor(minutes / 60);
-  const remainingMinutes = minutes % 60;
-  return `${hours.toString().padStart(2, '0')}:${remainingMinutes.toString().padStart(2, '0')}`;
-};
-
 // Helper function to generate random number of tags
 const getRandomTags = (tags: Tag[], min: number, max: number): string[] => {
   const count = Math.floor(Math.random() * (max - min + 1) + min);

@@ -152,7 +152,7 @@ const props = defineProps<{
   tags: Tag[];
 }>();
 
-const emit = defineEmits<{
+defineEmits<{
   (e: 'new'): void;
   (e: 'edit', entry: TimeEntry): void;
   (e: 'delete', id: string): void;

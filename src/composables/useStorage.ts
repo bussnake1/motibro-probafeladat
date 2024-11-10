@@ -1,4 +1,4 @@
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import { useToast } from 'primevue/usetoast';
 import type { TimeEntry, Tag } from '../types';
 import { storage, generateId } from '../services/storage';

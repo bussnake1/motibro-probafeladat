@@ -1,4 +1,3 @@
-import { computed } from 'vue';
 import dayjs from 'dayjs';
 import type { TimeEntry } from '../types';
 
