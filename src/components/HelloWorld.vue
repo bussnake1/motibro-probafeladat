@@ -1,5 +1,17 @@
+<script setup lang="ts">
+import Card from 'primevue/card';
+</script>
+
 <template>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <Card class="">
+    <template #title>
+      <h1 class="">
+        Hello world!
+      </h1>
+    </template>
+  </Card>
 </template>
+
+<style scoped>
+/* @import '../assets/primevue/card.css'; */
+</style>
