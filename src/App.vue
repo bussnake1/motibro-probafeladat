@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-100">
     <header class="bg-white shadow">
-      <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div class="flex items-center justify-between px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <h1 class="text-2xl font-bold text-gray-900">Time Tracker</h1>
         <div>
           <Button 
@@ -21,7 +21,7 @@
       </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+    <main class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <Tabs :value="0" @update:value="(val: number) => activeIndex = val">
         <TabList>
           <Tab :value="0">Time Entries</Tab>
@@ -52,7 +52,6 @@
         v-model:visible="showEntryDialog" 
         :header="selectedEntry ? 'Edit Entry' : 'New Entry'"
         modal
-        :style="{ width: '50vw' }"
       >
         <TimeEntryForm
           :entry="selectedEntry"
@@ -67,7 +66,7 @@
     <ConfirmDialog>
       <template #message>
         <div class="flex flex-column align-items-center">
-          <i class="pi pi-exclamation-triangle text-6xl text-yellow-500 mb-4"></i>
+          <i class="mb-4 text-6xl text-yellow-500 pi pi-exclamation-triangle"></i>
           <span>Are you sure you want to empty the database? This action cannot be undone.</span>
         </div>
       </template>
