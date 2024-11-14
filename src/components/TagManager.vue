@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-4">
-    <div class="flex gap-4 items-start">
-      <form @submit.prevent="handleSubmit" class="flex-1 space-y-4 p-4 bg-white dark:bg-surface-900 rounded-lg shadow">
+    <div class="flex-col items-start gap-4 sm:flex">
+      <form @submit.prevent="handleSubmit" class="flex-1 p-4 space-y-4 bg-white rounded-lg shadow dark:bg-surface-900">
         <div class="space-y-2">
           <label class="block text-sm font-medium text-gray-700 dark:text-surface-300">Tag Name</label>
           <InputText v-model="form.name" class="w-full" />
@@ -28,8 +28,8 @@
         </div>
       </form>
 
-      <div class="flex-1 p-4 bg-white dark:bg-surface-900 rounded-lg shadow">
-        <h3 class="text-lg font-semibold mb-4">Existing Tags</h3>
+      <div class="flex-1 p-4 bg-white rounded-lg shadow dark:bg-surface-900">
+        <h3 class="mb-4 text-lg font-semibold">Existing Tags</h3>
         <div class="space-y-2">
           <div 
             v-for="tag in tags" 
